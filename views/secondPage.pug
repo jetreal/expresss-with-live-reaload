@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  mixin block-gsap()
+    section.block-gsap
+      ul.box
+        li#box-item-one.box-item
+          | 1
+        li#box-item-two.box-item
+          | 2
+        li#box-item-three.box-item
+          | 3
+        li#box-item-four.box-item
+          | 4
+      .box-Welcome
+        a(href="/" alt="") 
+          button | firstPage
+
+  +block-gsap
+
+  // example to using mixin in pug
