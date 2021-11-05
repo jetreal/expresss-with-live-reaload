@@ -22,7 +22,6 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
-
 var app = express();
 
 app.use(connectLivereload());
