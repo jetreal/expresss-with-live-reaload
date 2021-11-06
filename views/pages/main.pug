@@ -1,16 +1,16 @@
-extends layout
+extends ../layouts/layout
 
 block content
   h1= title
   p Welcome to  #{title}
 
-  mixin block-gsap()
+  mixin block-gsap(g,y)
     section.block-gsap
       ul.box
         li#box-item-one.box-item
-          | 1
+          =g
         li#box-item-two.box-item
-          | 2
+          =y
         li#box-item-three.box-item
           | 3
         li#box-item-four.box-item
@@ -19,6 +19,6 @@ block content
         a(href="/secondPage" alt="") 
           button | secondPage
 
-  +block-gsap
+  +block-gsap(1,2)
 
   // example to using mixin in pug

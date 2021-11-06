@@ -4,7 +4,12 @@ var gulp           = require('gulp'),
   cssnano      		 = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
 	rename       		 = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
 	concat       		 = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-	del          		 = require('del') // Подключаем библиотеку для удаления фа
+	del          		 = require('del'); // Подключаем библиотеку для удаления фа
+
+	// const gulpWebpack = require('gulp-webpack')
+  // const webpack = require('webpack')
+	// const webpackStream = require('webpack-stream');
+  // const webpackConfig = require('./webpack.config.js')
 
 
 	const { series } = require('gulp');  // новый синтаксис
@@ -23,4 +28,7 @@ gulp.task('sass', function () { // Создаем таск Sass
 		.pipe(gulp.dest('public/stylesheets')) // Выгружаем результата в папку app/css
 });
 
+// exports.scripts = scripts
+
 exports.watch = parallel('watch');
+
