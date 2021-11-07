@@ -2,7 +2,9 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/main.css')
-    script(src="/javascripts/index.js")
+    link(rel='stylesheet', type="text/css", href='./dist/main.css')
+    script(src="./dist/main.bundle.js")
+    script(src="./dist/other.bundle.js")
+    script(src="./dist/vendors-node_modules_babel_polyfill_lib_index_js.bundle.js")
   body
     block content

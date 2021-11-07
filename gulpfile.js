@@ -17,12 +17,12 @@ var gulp           = require('gulp'),
 
 
   gulp.task('watch', function() {
-    gulp.watch('src/sass/**/*.sass', gulp.parallel('sass')); // Наблюдение за sass файлами в папке sass      // Наблюдение за JS файлами в папке js
+    gulp.watch('public/stylesheets/sass/**/*.sass', gulp.parallel('sass')); // Наблюдение за sass файлами в папке sass      // Наблюдение за JS файлами в папке js
   });
 
   // sass and css tasks
 gulp.task('sass', function () { // Создаем таск Sass
-	return gulp.src('src/sass/**/*.sass') // Берем источник
+	return gulp.src('public/stylesheet/sass/**/*.sass') // Берем источник
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('public/stylesheets')) // Выгружаем результата в папку app/css
